@@ -1,0 +1,14 @@
+body{
+    background-color: antiquewhite;
+    width:60%;
+    margin:auto;
+    }
+    h1{
+    position: static;
+    text-align:center;
+    color: blue;
+    }
+    h2{
+    position: relative;
+    color: red;
+    }
