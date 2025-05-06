@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <div class="main">
+    <center><b><h2>COLLEGE ADMISSION FORM</h2></b></center>
+    <center><h5>Enter the form details</h5></center>
+    <div id="info">
+        <form action="" method="post">
+            <fieldset>
+                <legend>Personal Informations</legend>
+                <label for="first">First Name</label>
+                <input type="text" name="first" id="first" required/><br><br>
+                <label for="middle">Middle Name</label>
+                <input type="text" name="middle" id="middle"/><br><br>
+                <label for="last">Last Name</label>
+                <input type="text" name="last" id="last" required/><br><br>
+                
+                <label>Gender    </label>
+                <input type="radio" id="male" name="gender" required/>
+                <label for="male">male</label>
+                <input type="radio" id="female" name="gender" required/>
+                <label for="female">female</label>
+                <input type="radio" id="other" name="gender" required/>
+                <lab<label for="dob">Date of birth</label>
+                <input type="date" name="dob" id="dob" required/><br><br>
+                <label for="other">others</label>
+                <label for="email"> Email</label>
+                <input type="email" name="email" id="email" required/><br><br>
+                <label>Address    </label>
+                <textarea rows="5" cols="50"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Educational information</legend>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SI No</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of passing</th>
+                            <th> Upload marklist</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text" name='boardx' required/></td>
+                            <td><input type="text" name="percentagex" required/></td>
+                            <td><input type="number" name="year_of_passing" min=1900 max=2100 required/></td>
+                            <td><input type="file" name="myfilex" required/></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text" name='boardxii' required/></td>
+                            <td><input type="text" name="percentagexii" required/></td>
+                            <td><input type="number" name="year_of_passingii" min=1900 max=2100 required/></td>
+                            <td><input type="file" name="myfilexii" required/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset>
+                <input type="checkbox" value="ok">
+                I hereby read the terms and condition
+                <br>
+                <center><input type="submit" value="submit"></center>
+            </fieldset>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

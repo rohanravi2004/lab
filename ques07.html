@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        body{
+            text-align: center;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+            flex-direction: column;
+        }
+        button {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        }
+        button:hover {
+        transform: scale(1.1)
+        }
+        button:active {
+        transform: scale(.9)
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Color Generator</h1>
+    <div class="generate-color">
+        <p id="color"></div>
+        <button onclick="generateColor()">Generate New color</button>
+    </div>
+    <script>
+        function generateColor(){
+            let color="#";
+            let digits='0123456789ABCDEF'
+            for(let i=0;i<6;i++)
+        {
+            let randomdigits=Math.floor(Math.random()*16);
+            color+=digits[randomdigits];
+        }
+        document.getElementById('color').innerHTML=color;
+        document.body.style.backgroundColor=color;
+    }
+    generateColor()
+    </script>
+</body>
+</html>
