@@ -1,0 +1,46 @@
+<!DOCTYPEhtml>
+ <html>
+ <head><title>ArrayOperations</title></head>
+ <body>
+ <form>
+ <fieldset>
+ <legend>Addelementstoarray</legend>
+ <inputtype="text"id="text1"></input>
+ <inputtype="button"id="button1"value="Add"onclick="add_element_to_array();"></input>
+ </fieldset>
+ <input type="button"id="button2"value="Display"onclick="display_array();"></input>
+ <buttontype="button"onclick="sort()">Sort</button>
+ <buttontype="button"onclick="rev()">Reverse</button>
+ <buttontype="button"onclick="desc()">DescendingOrder</button>
+ <div id="Result"></div>
+ <div id="names"></div>
+ <script>
+ varx=0;
+ vararray=Array();
+ functionadd_element_to_array(){
+ array[x]=document.getElementById("text1").value;
+ alert("Element:"+array[x]+"Addedatindex"+x);
+ x++;
+ document.getElementById("text1").value="";
+ }
+ functiondisplay_array(){
+ document.getElementById("Result").innerHTML="actualarray=["+array+"]";
+ }
+ functionrev(){
+ display_array()
+ document.getElementById("names").innerHTML="ReversedArray:"+array.reverse();
+ }
+ functionsort(){
+ display_array();
+ array.sort();
+ document.getElementById("names").innerHTML="AscendingorderSortedArray:"+array;
+ }
+ functiondesc(){
+ display_array();
+ array.sort().reverse();
+ document.getElementById("names").innerHTML="DescendingorderSortedArray:"+array;
+ }
+ </script>
+ </form>
+ </body>
+ </html>
