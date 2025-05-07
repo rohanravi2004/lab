@@ -1,0 +1,83 @@
+ <!DOCTYPEhtml>
+ <head>
+ <style>
+ body {
+ background-color:#f1f1f1;
+ font-family:Arial,sans-serif;
+ }
+ #heading{
+ text-align:center;
+ padding:auto;
+ background-color:skyblue;
+ color:white;
+ }
+ #calculator{
+ background-color:#fff;
+ width:300px;
+ margin:auto;
+ padding:20px;
+ border-radius:10px;
+ box-shadow:2px2px10px#888;
+ }
+ </style>
+ <scripttype="text/javascript">
+ function addition(){
+ a=Number(document.my_cal.first.value);
+ b=Number(document.my_cal.second.value);
+ c=a+b;
+ document.my_cal.total.value=c;
+ }
+ function multiply(){
+ a=Number(document.my_cal.first.value);
+ b=Number(document.my_cal.second.value);
+ c=a * b;
+ document.my_cal.total.value=c;
+ }
+ function subtraction(){
+ a=Number(document.my_cal.first.value);
+ b=Number(document.my_cal.second.value);
+ c=a-b;
+ document.my_cal.total.value=c;
+ }
+ function division(){
+ a=Number(document.my_cal.first.value);
+ b=Number(document.my_cal.second.value);
+ c=a/b;
+    document.my_cal.total.value=c;
+ }
+ function modulus(){
+ a=Number(document.my_cal.first.value);
+ b=Number(document.my_cal.second.value);
+ c=a%b;
+ document.my_cal.total.value=c;
+ }
+ functionclearAll(){
+ my_cal.first.value='';
+ my_cal.second.value='';
+ my_cal.total.value='';
+ }
+ </script>
+ </head>
+ <body>
+ <divid="heading">
+ <h1> ArithmeticOperationsinJavaScript</h1>
+ </div>
+ <divid="calculator">
+ <formname="my_cal">
+ Number1:<inputtype="text"name="first">
+ <br>
+ <br>
+ Number2:<inputtype="text"name="second">
+ <br><br>
+ <inputtype="button"value="ADD"onclick="addition()">
+ <inputtype="button"value="SUB"onclick="subtraction();">
+ <inputtype="button"value="MUL"onclick="multiply();">
+ <inputtype="button"value="DIV"onclick="division();">
+ <inputtype="button"value="MOD"onclick="modulus();">
+ <inputtype="button"value="CLEAR"onclick="clearAll();">
+ <br><br>
+ Result:<inputtype="text"name="total">
+ </form>
+ </div>
+ </body>
+ </html>
