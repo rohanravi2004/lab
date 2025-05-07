@@ -1,0 +1,45 @@
+ <!DOCTYPEhtml>
+ <htmllang="en">
+ <head>
+ <metacharset="UTF-8">
+ <title>Animation-movingacar</title>
+ <style>
+ #container{
+ width:2000px;
+ height:550px;
+ border:1pxsolid#000;
+ position:relative;
+ background:url('grass1.jpg')no-repeat;
+ background-position:0bottom;
+ background-size:contain;
+ }
+ #car {
+ position:absolute;
+ height:1000px;
+ width:500px;
+ bottom:100px;
+ left:2px;
+ opacity:20;
+ }
+ </style>
+ </head>
+ <body>
+ <divid="container">
+ <img src="Figure2.png"id="car"/>
+ </div>
+ <script>
+ (function(selector){
+ letstart_pos=2; //startfrom2pixelleft
+ letend_pos=document.querySelector("#container").getBoundingClientRect().width-100;
+ letinterval=setInterval(function(){
+ if(selector.offsetLeft>=end_pos){
+ start_pos=2;
+ }else{
+ start_pos++;
+ }
+ selector.style=`left:${start_pos}px`;
+ },10);
+ })(document.querySelector("#car"));
+ </script>
+ </body>
+ </html>
